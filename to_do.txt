@@ -1,0 +1,66 @@
+Part 1 - Fonctions de la libc
+
+Vous devez recoder les fonctions suivantes.
+Ces fonctions ne nécessitent aucune fonction externe :
+
+• memset                x
+• bzero                 x
+• memcpy                x
+• memccpy
+• memmove
+• memchr
+• memcmp
+• strlen                x
+• isalpha               x
+• isdigit               x
+• isalnum               x
+• isascii               x
+• isprint               x
+• toupper               x
+• tolower               x
+• strchr                x
+• strrchr               x
+• strncmp               x
+• strlcpy
+• strlcat
+• strnstr
+• atoi                  x
+
+Vous devez également recoder ces fonctions,
+en faisant appel à la fonction “malloc” :
+
+• calloc
+• strdup
+
+14/24
+
+Part 2 - Fonctions supplémentaires
+
+• ft_substr
+• ft_strjoin
+• ft_strtrim
+• ft_split
+• ft_itoa               x
+• ft_strmapi
+• ft_putchar_fd
+• ft_putstr_fd
+• ft_putendl_fd
+• ft_putnbr_fd
+
+1/10
+
+Part 3 - BONUS
+
+• ft_lstnew
+• ft_lstadd_front
+• ft_lstsize
+• ft_lstlast
+• ft_lstadd_back
+• ft_lstdelone
+• ft_lstclear
+• ft_lstiter
+• ft_lstmap
+
+0/9
+
+TOTAL: 15/43
