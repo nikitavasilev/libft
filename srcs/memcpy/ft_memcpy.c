@@ -6,13 +6,13 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 12:50:51 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/22 13:15:11 by nvasilev         ###   ########.fr       */
+/*   Updated: 2020/11/22 14:39:51 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*s;
