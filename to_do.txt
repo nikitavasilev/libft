@@ -6,8 +6,8 @@ Ces fonctions ne nécessitent aucune fonction externe :
 • memset                x
 • bzero                 x
 • memcpy                x
-• memccpy
-• memmove
+• memccpy               x
+• memmove               x
 • memchr
 • memcmp
 • strlen                x
@@ -32,7 +32,7 @@ en faisant appel à la fonction “malloc” :
 • calloc
 • strdup
 
-14/24
+17/24
 
 Part 2 - Fonctions supplémentaires
 
@@ -40,7 +40,7 @@ Part 2 - Fonctions supplémentaires
 • ft_strjoin
 • ft_strtrim
 • ft_split
-• ft_itoa               x
+• ft_itoa               x --> reduce
 • ft_strmapi
 • ft_putchar_fd
 • ft_putstr_fd
@@ -63,4 +63,4 @@ Part 3 - BONUS
 
 0/9
 
-TOTAL: 15/43
+TOTAL: 18/43
