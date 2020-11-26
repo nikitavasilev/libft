@@ -16,7 +16,7 @@ all:		$(NAME)
 
 .c.o:		$(CC) $(FLAGS) -I $(PATH_HEADER) -c $< -o $(<:.c=.o)
 
-${NAME}:	$(OBJS)
+$(NAME):	$(OBJS)
 			$(LINK) $(NAME) $(OBJS)
 			$(INDEX) $(NAME)
 
@@ -27,5 +27,9 @@ fclean:		clean
 			rm -f $(NAME)
 
 re:			fclean all
+
+so:
+			$(CC) -fPIC -c $(FLAGS) $(SRCS)
+			gcc -shared -o libft.so $(OBJS)
 
 .PHONY:		all clean fclean re
