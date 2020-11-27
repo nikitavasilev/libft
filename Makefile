@@ -1,7 +1,6 @@
 NAME = libft.a
 
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRC_DIR = srcs
 PATH_HEADER = ./includes/
@@ -14,7 +13,7 @@ INDEX = ranlib
 
 all:		$(NAME)
 
-.c.o:		$(CC) $(FLAGS) -I $(PATH_HEADER) -c $< -o $(<:.c=.o)
+.c.o:		$(CC) $(CFLAGS) -I $(PATH_HEADER) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
 			$(LINK) $(NAME) $(OBJS)
@@ -29,7 +28,6 @@ fclean:		clean
 re:			fclean all
 
 so:
-			$(CC) -fPIC -c $(FLAGS) $(SRCS)
-			gcc -shared -o libft.so $(OBJS)
+			$(CC) -shared -o libft.so $(OBJS)
 
 .PHONY:		all clean fclean re
