@@ -6,13 +6,13 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 18:11:38 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/27 17:55:58 by nvasilev         ###   ########.fr       */
+/*   Updated: 2020/11/28 02:40:47 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-char	ft_sizeof_long(void)
+static char	ft_sizeof_long(void)
 {
 	char	size;
 
@@ -23,7 +23,7 @@ char	ft_sizeof_long(void)
 	return (size);
 }
 
-char	ft_long_overflow_checker(char count, char sign, char value)
+static char	ft_long_overflow_checker(char count, char sign, char value)
 {
 	char	max_size;
 
@@ -41,7 +41,7 @@ char	ft_long_overflow_checker(char count, char sign, char value)
 	return (1);
 }
 
-char	ft_add_numbers(const char *str, char sign, long *res)
+static char	ft_add_numbers(const char *str, char sign, long *res)
 {
 	char	count;
 	char	max_long_size;
@@ -64,7 +64,7 @@ char	ft_add_numbers(const char *str, char sign, long *res)
 	return (1);
 }
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	long	res;
 	char	sign;
