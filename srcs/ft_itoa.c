@@ -6,13 +6,13 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 17:35:13 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/24 14:28:59 by nvasilev         ###   ########.fr       */
+/*   Updated: 2020/11/28 15:12:12 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int		ft_count_chars(unsigned int num)
+static int	ft_count_chars(unsigned int num)
 {
 	size_t i;
 
@@ -27,7 +27,7 @@ int		ft_count_chars(unsigned int num)
 	return (i);
 }
 
-void	ft_heap_adder(char *str, unsigned int n, unsigned int i)
+static void	ft_heap_adder(char *str, unsigned int n, unsigned int i)
 {
 	static unsigned int j;
 
@@ -41,7 +41,7 @@ void	ft_heap_adder(char *str, unsigned int n, unsigned int i)
 	str[j] = '\0';
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char			*res;
 	unsigned int	num;
