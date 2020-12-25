@@ -6,20 +6,20 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 17:35:13 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/28 15:12:12 by nvasilev         ###   ########.fr       */
+/*   Updated: 2020/12/26 00:19:04 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-static int	ft_count_chars(unsigned int num)
+static size_t	count_chars(int num)
 {
 	size_t i;
 
-	if (num == 0)
-		return (1);
 	i = 0;
-	while (num > 0)
+	if (num <= 0)
+		i++;
+	while (num)
 	{
 		num /= 10;
 		i++;
@@ -27,48 +27,33 @@ static int	ft_count_chars(unsigned int num)
 	return (i);
 }
 
-static void	ft_heap_adder(char *str, unsigned int n, unsigned int i)
+static void		str_fill(char *str, int num, size_t i)
 {
-	static unsigned int j;
+	unsigned int n;
 
-	j = i;
-	if (n > 0)
-	{
-		ft_heap_adder(str, n / 10, j);
-		str[j] = (n % 10) + '0';
-		j++;
-	}
-	str[j] = '\0';
+	n = num;
+	if (num < 0)
+		n = num * -1;
+	if (n >= 10)
+		str_fill(str, n / 10, i - 1);
+	str[i] = (n % 10) + '0';
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	char			*res;
-	unsigned int	num;
-	unsigned int	i;
+	char	*res;
+	size_t	length;
 
-	i = 0;
-	num = n;
+	length = count_chars(n);
+	if (!(res = malloc(length + 1)))
+		return (0);
 	if (n < 0)
 	{
-		num = n * -1;
-		res = malloc(ft_count_chars(num) + 2);
+		res[0] = '-';
+		str_fill(&res[1], n, length - 2);
 	}
 	else
-		res = malloc(ft_count_chars(num) + 1);
-	if (!res)
-		return (0);
-	if (n == 0)
-	{
-		res[i] = '0';
-		res[i + 1] = '\0';
-		i += 2;
-	}
-	else if (n < 0)
-	{
-		res[i] = '-';
-		i++;
-	}
-	ft_heap_adder(res, num, i);
+		str_fill(res, n, length - 1);
+	res[length] = '\0';
 	return (res);
 }
