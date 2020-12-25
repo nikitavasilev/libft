@@ -8,8 +8,8 @@ Ces fonctions ne nécessitent aucune fonction externe :
 • memcpy                x
 • memccpy               x
 • memmove               x
-• memchr
-• memcmp
+• memchr                x
+• memcmp                x
 • strlen                x
 • isalpha               x
 • isdigit               x
@@ -21,33 +21,33 @@ Ces fonctions ne nécessitent aucune fonction externe :
 • strchr                x
 • strrchr               x
 • strncmp               x
-• strlcpy
-• strlcat
-• strnstr
+• strlcpy               x
+• strlcat               x
+• strnstr               x
 • atoi                  x
 
 Vous devez également recoder ces fonctions,
 en faisant appel à la fonction “malloc” :
 
-• calloc
-• strdup
+• calloc                x
+• strdup                x
 
-17/24
+24/24
 
 Part 2 - Fonctions supplémentaires
 
-• ft_substr
-• ft_strjoin
-• ft_strtrim
-• ft_split
-• ft_itoa               x --> reduce
-• ft_strmapi
-• ft_putchar_fd
-• ft_putstr_fd
-• ft_putendl_fd
-• ft_putnbr_fd
+• ft_substr             x
+• ft_strjoin            x
+• ft_strtrim            x
+• ft_split              x
+• ft_itoa               x
+• ft_strmapi            x
+• ft_putchar_fd         x
+• ft_putstr_fd          x
+• ft_putendl_fd         x
+• ft_putnbr_fd          x
 
-1/10
+10/10
 
 Part 3 - BONUS
 
@@ -63,4 +63,4 @@ Part 3 - BONUS
 
 0/9
 
-TOTAL: 18/43
+TOTAL: 34/43
