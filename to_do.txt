@@ -1,7 +1,8 @@
-Part 1 - Fonctions de la libc
+Part 1 - Libc functions
 
-Vous devez recoder les fonctions suivantes.
-Ces fonctions ne nécessitent aucune fonction externe :
+You must re-code the following functions.
+These function do not need any external
+functions:
 
 • memset                x
 • bzero                 x
@@ -26,15 +27,15 @@ Ces fonctions ne nécessitent aucune fonction externe :
 • strnstr               x
 • atoi                  x
 
-Vous devez également recoder ces fonctions,
-en faisant appel à la fonction “malloc” :
+You must also re-code the following functions,
+using the function “malloc”:
 
 • calloc                x
 • strdup                x
 
 24/24
 
-Part 2 - Fonctions supplémentaires
+Part 2 - Additional functions
 
 • ft_substr             x
 • ft_strjoin            x
@@ -51,16 +52,16 @@ Part 2 - Fonctions supplémentaires
 
 Part 3 - BONUS
 
-• ft_lstnew
-• ft_lstadd_front
-• ft_lstsize
-• ft_lstlast
-• ft_lstadd_back
-• ft_lstdelone
-• ft_lstclear
-• ft_lstiter
-• ft_lstmap
+• ft_lstnew             x
+• ft_lstadd_front       x
+• ft_lstsize            x
+• ft_lstlast            x
+• ft_lstadd_back        x
+• ft_lstdelone          x
+• ft_lstclear           x
+• ft_lstiter            x
+• ft_lstmap             x
 
-0/9
+9/9
 
-TOTAL: 34/43
+TOTAL: 43/43
