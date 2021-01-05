@@ -13,7 +13,7 @@ sleep 2
 
 # search and replace in C files -> old libft path to new one
 echo 'Searching and replacing old libft path to new one in all C files...'
-sed -i "s%../includes/libft.h%libft.h%g" *.c
+sed -i '' "s%../includes/libft.h%libft.h%g" *.c
 sleep 2
 
 # Remove old Makefile and making a new one
