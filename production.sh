@@ -16,6 +16,12 @@ echo 'Searching and replacing old libft path to new one in all C files...'
 sed -i "s%../includes/libft.h%libft.h%g" *.c
 sleep 2
 
+# Remove old Makefile and making a new one
+echo 'Removing old Makefile and making a new one for production'
+rm Makefile
+mv mfile Makefile
+sleep 2
+
 echo 'PROJECT READY FOR PRODUCTION'
 sleep 1
 
