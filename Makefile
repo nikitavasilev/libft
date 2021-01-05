@@ -11,23 +11,26 @@ OBJS = $(SRCS:.c=.o)
 LINK = ar rc
 INDEX = ranlib
 
-all:		$(NAME)
+all:	$(NAME)
 
-.c.o:		$(CC) $(CFLAGS) -I $(PATH_HEADER) -c $< -o $(<:.c=.o)
+.c.o:	$(CC) $(CFLAGS) -I $(PATH_HEADER) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
-			$(LINK) $(NAME) $(OBJS)
-			$(INDEX) $(NAME)
+	$(LINK) $(NAME) $(OBJS)
+	$(INDEX) $(NAME)
+
+prod:
+	./production
 
 clean:
-			rm -f $(OBJS)
+	rm -f $(OBJS)
 
-fclean:		clean
-			rm -f $(NAME)
+fclean:	clean
+	rm -f $(NAME)
 
-re:			fclean all
+re:	fclean all
 
 so:
-			$(CC) -shared -o libft.so $(OBJS)
+	$(CC) -shared -o libft.so $(OBJS)
 
-.PHONY:		all clean fclean re
+.PHONY:	all clean fclean re so prod
