@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # moving all files to root
 echo 'moving all files to root...'
@@ -13,7 +13,21 @@ sleep 2
 
 # search and replace in C files -> old libft path to new one
 echo 'Searching and replacing old libft path to new one in all C files...'
-sed -i '' "s%../includes/libft.h%libft.h%g" *.c
+echo 'Checking OS TYPE...'
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  echo "OS TYPE == LINUX"
+  sed -i "s%../includes/libft.h%libft.h%g" *.c 
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  echo "OS TYPE == macOS"
+  sed -i '' "s%../includes/libft.h%libft.h%g" *.c
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+  echo "OS TYPE == freeBSD"
+  sed -i '' "s%../includes/libft.h%libft.h%g" *.c
+else
+  echo 'This script will work only on macOS, linux and BSD. Please adapt this script for your environment.'
+fi
+
 sleep 2
 
 # Remove old Makefile and making a new one
@@ -27,4 +41,4 @@ sleep 1
 
 echo 'DELETING SCRIPT...'
 echo 'DONE :)'
-rm production.sh
+rm production
