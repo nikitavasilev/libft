@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:05:22 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/24 14:32:23 by nvasilev         ###   ########.fr       */
+/*   Updated: 2021/01/06 12:07:40 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t n)
 {
-	unsigned int	i;
-	char			*str;
+	size_t	i;
 
-	str = (char *)b;
 	i = 0;
 	while (i < n)
 	{
-		str[i] = c;
+		((char *)b)[i] = c;
 		i++;
 	}
-	return (str);
+	return (b);
 }
