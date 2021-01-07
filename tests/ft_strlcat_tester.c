@@ -3,10 +3,10 @@
 
 int main(void)
 {
-	char *src = "What's up?";
-	char dst[20] = " My man!";
+	char *src = "toto";
+	char dst[20] = "";
 
-	printf("%d\n", ft_strlcat(dst, src, 20));
+	printf("%zu\n", ft_strlcat(dst, src, 0));
 	printf("%s\n", dst);
 	return (0);
 }
