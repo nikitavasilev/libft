@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 14:02:01 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/27 21:11:16 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:08:09 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

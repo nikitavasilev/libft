@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:41:42 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/26 18:05:22 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/18 00:04:03 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -19,13 +19,13 @@ char	*ft_strrchr(const char *s, int c)
 	occ = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if ((unsigned char)*s == (unsigned char)c)
 			occ = 1;
 		s++;
 	}
-	while (*s != c && occ)
+	while ((unsigned char)*s != (unsigned char)c && occ)
 		s--;
-	if (*s == c)
+	if ((unsigned char)*s == (unsigned char)c)
 		return ((char *)s);
 	return (0);
 }

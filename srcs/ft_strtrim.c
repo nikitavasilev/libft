@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 15:14:35 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/12/20 17:45:09 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:08:23 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 static char	in_set(char c, const char *set)
 {
@@ -23,7 +23,7 @@ static char	in_set(char c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -31,15 +31,16 @@ char		*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (s1[i] && in_set(s1[i], set))
 		i++;
 	end = ft_strlen(s1);
 	while (end > i && in_set(s1[end - 1], set))
 		end--;
-	if (!(str = malloc(end - i + 1)))
-		return (0);
+	str = malloc(end - i + 1);
+	if (!str)
+		return (NULL);
 	j = 0;
 	while (i + j < end)
 	{

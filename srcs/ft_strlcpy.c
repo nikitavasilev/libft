@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 12:19:12 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/28 13:24:47 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:07:46 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

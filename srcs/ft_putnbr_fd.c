@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 17:21:08 by nvasilev          #+#    #+#             */
-/*   Updated: 2021/01/05 21:22:19 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:06:23 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

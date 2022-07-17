@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 16:47:54 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/24 14:24:09 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:01:20 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

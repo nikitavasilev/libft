@@ -6,19 +6,22 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 16:08:32 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/12/25 16:37:38 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:07:58 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*str;
 	unsigned int	i;
 
-	if (!s || !(str = malloc(ft_strlen(s) + 1)))
-		return (0);
+	if (!s)
+		return (NULL);
+	str = malloc(ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

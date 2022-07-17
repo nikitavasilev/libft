@@ -6,20 +6,13 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 16:54:43 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/12/25 17:01:26 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:06:33 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (s)
-	{
-		while (*s)
-		{
-			ft_putchar_fd(*s, fd);
-			s++;
-		}
-	}
+	write(fd, str, ft_strlen(str));
 }

@@ -6,15 +6,15 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 17:12:31 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/24 14:33:20 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:07:51 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

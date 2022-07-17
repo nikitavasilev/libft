@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 13:25:43 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/11/26 14:11:07 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:05:13 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:05:22 by nvasilev          #+#    #+#             */
-/*   Updated: 2021/01/06 12:07:40 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/17 23:05:42 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t n)
 {

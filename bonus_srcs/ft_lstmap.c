@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/26 20:32:15 by nvasilev          #+#    #+#             */
-/*   Updated: 2020/12/26 20:35:43 by nvasilev         ###   ########.fr       */
+/*   Created: 2020/12/26 21:42:47 by nvasilev          #+#    #+#             */
+/*   Updated: 2022/07/17 23:09:50 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
+	t_list	*newcell;
+	t_list	*res;
 
-	i = 0;
+	if (!lst)
+		return (0);
+	res = ft_lstnew(f(lst->content));
+	if (!res)
+	{
+		del(lst->content);
+		return (NULL);
+	}
+	lst = lst->next;
 	while (lst)
 	{
+		newcell = ft_lstnew(f(lst->content));
+		if (!newcell)
+		{
+			del(lst->content);
+			ft_lstclear(&res, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&res, newcell);
 		lst = lst->next;
-		i++;
 	}
-	return (i);
+	return (res);
 }
