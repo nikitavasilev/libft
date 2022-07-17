@@ -3,10 +3,10 @@
 
 int	main(void)
 {
-	char *init = "start of the substring.";
+	char *str = "0123456789";
 
-	printf("%s\n", init);
-	char *sub = ft_substr(init, 4, 20);
+	printf("%s\n", str);
+	char *sub = ft_substr(str, 9, 10);
 	printf("%s\n", sub);
 	free(sub);
 	return (0);
