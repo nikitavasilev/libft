@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:46:27 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/18 00:05:49 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/18 04:34:12 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (start > s_len)
-		s_len = 0;
-	if (s_len > len)
-		s_len = len;
-	str = malloc(s_len + 1);
+	s_len = strlen(s);
+	if (s_len < len)
+		len = s_len - start;
+	if (len < 0)
+		return (NULL);
+	str = malloc(len + 1);
+	printf("%zu\n", len + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
