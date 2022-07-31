@@ -6,35 +6,30 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 13:46:27 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/18 04:34:12 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 22:21:27 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	size_t	s_len;
 	size_t	i;
 
 	if (!s)
 		return (NULL);
-	s_len = strlen(s);
-	if (s_len < len)
-		len = s_len - start;
-	if (len < 0)
-		return (NULL);
+	if (start > ft_strlen(s) || start > len)
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	str = malloc(len + 1);
-	printf("%zu\n", len + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
-	if (s_len)
-	{
-		while (s[start] && i < len)
-			str[i++] = s[start++];
-	}
+	while (s[start] && i < len)
+		str[i++] = s[start++];
 	str[i] = '\0';
 	return (str);
 }
