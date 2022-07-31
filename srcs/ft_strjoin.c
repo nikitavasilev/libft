@@ -6,10 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 14:39:31 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:07:29 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:20:32 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

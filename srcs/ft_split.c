@@ -6,10 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:50:34 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:07:05 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:19:46 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static void	str_fill(char *dest, const char *src, size_t n)

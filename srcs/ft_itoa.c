@@ -6,11 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 17:35:13 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:02:51 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:18:14 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static size_t	count_chars(int num)
 {

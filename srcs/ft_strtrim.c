@@ -6,10 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 15:14:35 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:08:23 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:21:37 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static char	in_set(char c, const char *set)

@@ -6,10 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/25 16:08:32 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:07:58 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:21:00 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

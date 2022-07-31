@@ -6,10 +6,11 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 13:43:39 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:07:21 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:20:13 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

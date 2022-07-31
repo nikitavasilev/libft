@@ -6,7 +6,7 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/26 16:47:54 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:01:20 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:14:52 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*str;
-
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	ft_memset(s, '\0', n);
 }

@@ -6,15 +6,15 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 18:11:38 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/17 23:01:12 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 19:41:37 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	ft_sizeof_long(void)
+static int	ft_sizeof_long(void)
 {
-	char	size;
+	int	size;
 
 	if (sizeof(long) == 8)
 		size = 18;
@@ -23,9 +23,9 @@ static char	ft_sizeof_long(void)
 	return (size);
 }
 
-static char	ft_long_overflow_checker(char count, char sign, char value)
+static int	ft_long_overflow_checker(int count, int sign, char value)
 {
-	char	max_size;
+	int	max_size;
 
 	max_size = ft_sizeof_long();
 	if (sign == 1)
@@ -43,9 +43,9 @@ static char	ft_long_overflow_checker(char count, char sign, char value)
 
 static char	ft_add_numbers(const char *str, char sign, long *res)
 {
-	char	count;
-	char	max_long_size;
-	char	ret;
+	int		count;
+	int		max_long_size;
+	int		ret;
 
 	count = 0;
 	max_long_size = ft_sizeof_long();
@@ -67,8 +67,8 @@ static char	ft_add_numbers(const char *str, char sign, long *res)
 int	ft_atoi(const char *str)
 {
 	long	res;
-	char	sign;
-	char	ret;
+	int		sign;
+	int		ret;
 
 	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
