@@ -6,19 +6,14 @@
 /*   By: nvasilev <nvasilev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 13:36:18 by nvasilev          #+#    #+#             */
-/*   Updated: 2022/07/18 00:20:17 by nvasilev         ###   ########.fr       */
+/*   Updated: 2022/07/31 18:21:59 by nvasilev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <string.h>
-# include <strings.h>
-# include <ctype.h>
-# include <stdlib.h>
-# include <limits.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
@@ -59,7 +54,7 @@ char		*ft_itoa(int n);
 ** Memory management
 */
 
-void		*ft_memset(void *b, int c, size_t len);
+void		*ft_memset(void *dest, int val, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memccpy(void *dst, const void *src, int c, size_t n);
